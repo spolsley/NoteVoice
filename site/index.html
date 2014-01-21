@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music Reader</title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			.bar {
+				position: fixed;
+				top: 0px;
+				left: 0px;
+				margin: 0px;
+				width: 100%;
+				border-bottom: 2px solid black;
+			}
+			img {
+				position: fixed;
+			}
+			.note {
+				height: 8%;
+			}
+		</style>
+		<script type="text/javascript" src="soundmanager2-nodebug-jsmin.js"></script>
+		<script type="text/javascript">
+			soundManager.debugMode = false;
+			soundManager.onload = function() {
+				var notes = ['G5','F5','E5','D5','C5','B4','A4','G4','F4','E4','D4','C4',
+					'B3','A3','G3','F3','E3','D3','C3','B2','A2','G2','F2','E2'];
+				for (var i = 0; i < notes.length; i++)
+				{
+					soundManager.createSound({
+						id:notes[i],url:'audio/'+notes[i]+'.wav',
+						useHTML5Audio:true,preferFlash:false
+					});
+				}
+			}
+		</script>		
+	</head>
+	<body>
+		<div class="bar" style="height:90%;"></div>
+		<div class="bar" style="height:82%;"></div>
+		<div class="bar" style="height:74%;"></div>
+		<div class="bar" style="height:66%;"></div>
+		<div class="bar" style="height:58%;"></div>
+
+		<div class="bar" style="height:42%;"></div>
+		<div class="bar" style="height:34%;"></div>
+		<div class="bar" style="height:26%;"></div>
+		<div class="bar" style="height:18%;"></div>
+		<div class="bar" style="height:10%;"></div>
+
+		<img src="images/Treble (Alpha).png" style="height:55%;top:0%;left:10px;">
+		<img src="images/Bass (Alpha).png" style="height:26%;top:58%;left:10px;">
+
+		<img src="images/Note.png" class="note" id="G5" onclick="soundManager.play('G5')" style="top:2.2%;left:90%">
+		<img src="images/Note.png" class="note" id="F5" onclick="soundManager.play('F5')" style="top:5.75%;left:82%;">
+		<img src="images/Note.png" class="note" id="E5" onclick="soundManager.play('E5')" style="top:10.1%;left:74%;">
+		<img src="images/Note.png" class="note" id="D5" onclick="soundManager.play('D5')" style="top:14%;left:66%;">
+		<img src="images/Note.png" class="note" id="C5" onclick="soundManager.play('C5')" style="top:18.2%;left:58%;">
+		<img src="images/Note.png" class="note" id="B4" onclick="soundManager.play('B4')" style="top:22.25%;left:50%;">
+		<img src="images/Note.png" class="note" id="A4" onclick="soundManager.play('A4')" style="top:26.1%;left:42%;">
+		<img src="images/Note.png" class="note" id="G4" onclick="soundManager.play('G4')" style="top:30.25%;left:34%;">
+		<img src="images/Note.png" class="note" id="F4" onclick="soundManager.play('F4')" style="top:34.1%;left:26%;">
+		<img src="images/Note.png" class="note" id="E4" onclick="soundManager.play('E4')" style="top:38%;left:18%;">
+		<img src="images/Note.png" class="note" id="D4" onclick="soundManager.play('D4')" style="top:42.1%;left:10%;">
+		<img src="images/Note.png" class="note" id="C4" onclick="soundManager.play('C4')" style="top:46.25%;left:2%;">
+
+		<img src="images/Note.png" class="note" id="B3" onclick="soundManager.play('B3')" style="top:50.3%;left:90%">
+		<img src="images/Note.png" class="note" id="A3" onclick="soundManager.play('A3')" style="top:53.85%;left:82%;">
+		<img src="images/Note.png" class="note" id="G3" onclick="soundManager.play('G3')" style="top:58.2%;left:74%;">
+		<img src="images/Note.png" class="note" id="F3" onclick="soundManager.play('F3')" style="top:62.1%;left:66%;">
+		<img src="images/Note.png" class="note" id="E3" onclick="soundManager.play('E3')" style="top:66.3%;left:58%;">
+		<img src="images/Note.png" class="note" id="D3" onclick="soundManager.play('D3')" style="top:70.35%;left:50%;">
+		<img src="images/Note.png" class="note" id="C3" onclick="soundManager.play('C3')" style="top:74.2%;left:42%;">
+		<img src="images/Note.png" class="note" id="B2" onclick="soundManager.play('B2')" style="top:78.35%;left:34%;">
+		<img src="images/Note.png" class="note" id="A2" onclick="soundManager.play('A2')" style="top:82.2%;left:26%;">
+		<img src="images/Note.png" class="note" id="G2" onclick="soundManager.play('G2')" style="top:86.1%;left:18%;">
+		<img src="images/Note.png" class="note" id="F2" onclick="soundManager.play('F2')" style="top:90.2%;left:10%;">
+		<img src="images/Note.png" class="note" id="E2" onclick="soundManager.play('E2')" style="top:94.35%;left:2%;">
+	</body>
+</html>
